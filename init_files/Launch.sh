@@ -2,17 +2,20 @@
 #shellcheck disable=2164
 
 # First time setup of config files (edit mounted files for future changes)
-if [ ! -f ~/.local/share/Terraria/install.txt ] then 
-cp ~/install.txt ~/.local/share/Terraria 
-fi 
+if [ ! -f ~/.local/share/Terraria/install.txt ] 
+then 
+ cp ~/install.txt ~/.local/share/Terraria 
+fi
 
-if [ ! -f ~/.local/share/Terraria/enabled.json ] then 
+if [ ! -f ~/.local/share/Terraria/enabled.json ] 
+then 
  cp ~/enabled.json ~/.local/share/Terraria
-fi 
+fi
 
-if [ ! -f ~/.local/share/Terraria/serverconfig.txt ] then 
+if [ ! -f ~/.local/share/Terraria/serverconfig.txt ] 
+then 
  cp ~/serverconfig.txt ~/.local/share/Terraria
-fi 
+fi
 
 
 # Installing/updating mods
