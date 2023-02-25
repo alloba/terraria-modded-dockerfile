@@ -26,6 +26,8 @@ Everything is wrapped up in a dockerfile, so you should just have to run that.
 Default files are provided in the init_files directory. 
 Changes to configuration options should be done by editing files mounted in a shared directory. 
 
+**Please do change the default password I beg you**
+
 **Docker Commands** 
 
 docker build -t terraria-box .
