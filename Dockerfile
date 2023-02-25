@@ -49,5 +49,5 @@ ADD init_files/serverconfig.txt $HOME/serverconfig.txt
 VOLUME $HOME/.local/share/Terraria
 
 EXPOSE 7777
-#ENTRYPOINT [ "/bin/bash", "-c", "./Launch.sh" ]
-ENTRYPOINT [ "/bin/bash", "-c", "top" ]
+ENTRYPOINT [ "/bin/bash", "-c", "./Launch.sh" ]
+#ENTRYPOINT [ "/bin/bash", "-c", "top" ]
