@@ -7,6 +7,7 @@ RUN apk update \
  && apk add --no-cache bash curl tmux libstdc++ libgcc icu-libs \
  && rm -rf /var/cache/apk/*
 RUN apk add dos2unix 
+RUN apk add tmux 
 
 # Fix 32 and 64 bit library conflicts
 RUN mkdir /steamlib \
