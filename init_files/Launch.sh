@@ -1,5 +1,6 @@
 #!/bin/bash
 pipe=/tmp/tmod.pipe
+alias inject="$HOME/inject"
 
 # First time setup of config files (edit mounted files for future changes)
 if [ ! -f ~/.local/share/Terraria/install.txt ] 
@@ -48,6 +49,8 @@ cd ~/tModLoader
 
 trap shutdown TERM INT
 mkfifo $pipe 
-tmux new-session -d "./start-tModLoaderServer.sh -config $HOME/.local/share/Terraria/serverconfig.txt -nosteam -steamworkshopfolder $HOME/.local/share/Terraria/wsmods/steamapps/workshop | tee $pipe"
+#tmux new-session -d "./start-tModLoaderServer.sh -config $HOME/.local/share/Terraria/serverconfig.txt -nosteam -steamworkshopfolder $HOME/.local/share/Terraria/wsmods/steamapps/workshop | tee $pipe"
+tmux new-session -d "./LaunchUtils/ScriptCaller.sh -server -config $HOME/.local/share/Terraria/serverconfig.txt -nosteam -steamworkshopfolder $HOME/.local/share/Terraria/wsmods/steamapps/workshop | tee $pipe"
+
 cat $pipe &
 wait ${!}
